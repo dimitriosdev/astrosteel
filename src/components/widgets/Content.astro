@@ -31,7 +31,7 @@ const {
 } = Astro.props;
 ---
 
-<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-16 md:py-20']}>
+<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-gray-50 dark:bg-slate-800 py-16 md:py-20']}>
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
       (title || subtitle || highlight) && (
@@ -67,7 +67,7 @@ const {
               {items.map(({ title: title2, description, icon }) => (
                 <div class="flex">
                   <div class="flex-shrink-0">
-                    <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
+                    <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-blue-50">
                       <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5" />
                     </div>
                   </div>

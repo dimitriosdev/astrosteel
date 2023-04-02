@@ -1,23 +1,23 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'SteelMade Constructions',
 
   origin: 'https://astrowind.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'SteelMade — Συστήματα Αλουμινίου, Μεταλλικές κατασκευές',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    'Μελέτες, κατασκευές και τοποθετήσεις ολοκληρωμένων συστημάτων αλουμινίου, μεταλλικών κατασκευών και θωρακισμένων πορτών.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-  language: 'en',
+  language: 'el',
   textDirection: 'ltr',
 
-  dateFormatter: new Intl.DateTimeFormat('en', {
+  dateFormatter: new Intl.DateTimeFormat('el', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',

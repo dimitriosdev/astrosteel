@@ -6,6 +6,7 @@ interface CallToAction {
   text: string;
   href: string;
   icon?: string;
+  target?: '_self' | '_blank';
 }
 
 export interface Props {
@@ -35,7 +36,7 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-blue-200"
               set:html={title}
             />
           )
@@ -49,7 +50,7 @@ const {
                   {typeof callToAction === 'string' ? (
                     <Fragment set:html={callToAction} />
                   ) : (
-                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target="_blank" rel="noopener">
+                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target={callToAction?.target ?? "_blank"} rel="noopener">
                       {callToAction?.icon && (
                         <>
                           <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
