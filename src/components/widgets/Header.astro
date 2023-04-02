@@ -4,7 +4,7 @@ import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
-import { getHomePermalink, getAsset } from '~/utils/permalinks';
+import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -32,10 +32,10 @@ export interface Props {
 
 const {
   links = [],
-  actions = [],
+  //actions = [],
   isSticky = false,
   showToggleTheme = false,
-  showRssFeed = false,
+  //showRssFeed = false,
   position = 'center',
 } = Astro.props;
 ---
@@ -67,7 +67,7 @@ const {
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
                 <>
-                  <button class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                  <button class="font-medium hover:text-blue-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" />
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
@@ -85,7 +85,7 @@ const {
                 </>
               ) : (
                 <a
-                  class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  class="font-medium hover:text-blue-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   href={href}
                 >
                   {text}
@@ -100,10 +100,10 @@ const {
       <div class="hidden items-center md:flex">
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
 
-        {
+        <!-- {
           showRssFeed && (
             <a
-              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+              class="text-muted dark:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
               aria-label="RSS Feed"
               href={getAsset('/rss.xml')}
             >
@@ -129,7 +129,7 @@ const {
           ) : (
             ''
           )
-        }
+        } -->
       </div>
     </div>
   </div>

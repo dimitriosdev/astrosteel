@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'SteelMade — Συστήματα Αλουμινίου, Μεταλλικές κατασκευές',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    'Μελέτες, κατασκευές και τοποθετήσεις ολοκληρωμένων συστημάτων αλουμινίου, μεταλλικών κατασκευών και θωρακισμένων πορτών.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
